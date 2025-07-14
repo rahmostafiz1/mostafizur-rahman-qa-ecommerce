@@ -1,95 +1,51 @@
-# 🧪 Selenium Test Automation Framework (Java + TestNG)
+# 🧪 QA Ecommerce Automation Framework
 
-This is a modular and scalable **UI Test Automation Framework** built using **Selenium WebDriver**, **Java**, and **TestNG**, designed for headless execution, robust logging, and easy integration into CI/CD pipelines.
+Automated test suite for validating core workflows of the [SauceDemo Ecommerce](https://www.saucedemo.com) application using Selenium, TestNG, and Page Object Model (POM). Built for scalability, observability, and easy CI/CD integration.
 
----
+## 🚀 Tech Stack
 
-## 🚀 Features
-
-- ✅ Page Object Model (POM) architecture  
-- ✅ Cross-browser and headless support  
-- ✅ Logging with Log4j2 (console + file)  
-- ✅ Screenshots on test failure  
-- ✅ Externalized configuration via `config.properties`  
-- ✅ Easily extensible for additional pages, components, and environments  
+| Tool/Library           | Purpose                            |
+|------------------------|------------------------------------|
+| **Selenium WebDriver** | UI interaction and automation       |
+| **TestNG**             | Test execution and lifecycle hooks |
+| **Log4j2**             | Logging and debugging support       |
+| **Java 17 (Maven)**    | Framework language and build tool   |
 
 ---
+## ✅ Test Modules
 
-## 🧰 Tech Stack
-
-| Component     | Version      |
-|---------------|--------------|
-| Java          | 17           |
-| Selenium      | 4.12.1       |
-| TestNG        | 7.9.0        |
-| Maven         | Latest       |
-| Log4j2        | 2.20.0       |
-
----
-
-## 📂 Folder Structure
-
-```
-selenium-test-framework/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── pages/
-│   │   └── resources/
-│   │       ├── config.properties
-│   │       └── log4j2.xml
-│   ├── test/
-│   │   ├── java/
-│   │   │   ├── base/
-│   │   │   ├── tests/
-│   │   │   └── utils/
-├── logs/
-├── screenshots/
-├── pom.xml
-└── README.md
-```
+- **Login Tests**
+  - Valid and invalid credential flow
+  - Error message validation
+- **Inventory Tests**
+  - Product sorting
+  - Price and description assertion
+- **Cart Tests**
+  - Add/remove items
+  - Persistence across navigation
+- **Checkout Flow**
+  - Form input validation
+  - Total cost assertion
 
 ---
+## 🔧 Setup & Execution
 
-## ⚙️ Configuration
+ **Clone Repo**
 
-Customize your test run via `config.properties`:
-```properties
-browser=chrome
-headless=true
-baseUrl=https://example.com
-timeout=10
-```
+	git clone https://github.com/rahmostafiz1/qa-ecommerce.git
+	cd qa-ecommerce
 
----
+ **Install Dependencies**
 
-## ▶️ How to Run Tests
+	mvn clean install
+	
+ **Run Tests**   
 
-### Using Maven
-```bash
-mvn clean test
-```
-
-### Run Specific Test Classes
-```bash
-mvn -Dtest=LoginTest test
-```
-
----
-
-## 📄 Screenshots & Logs
-
-- 📸 Screenshots saved in `/screenshots/` on failure  
-- 📄 Logs stored in `/logs/test.log` using Log4j2
-
----
-
-## 📌 Future Enhancements
-
-- [ ] Add data-driven testing support  
-- [ ] Integrate GitHub Actions for CI  
-- [ ] Include HTML test reports (Surefire or ExtentReports)
-
+	mvn test	
+- **Output**
+  - Logs:	logs/
+  - Screenshots: screenshots/
+   
 ---
 
 ## 👤 Author
@@ -102,4 +58,4 @@ mvn -Dtest=LoginTest test
 
 ## 🏁 License
 
-This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT)
+This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT)   

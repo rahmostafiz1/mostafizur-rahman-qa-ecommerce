@@ -1,16 +1,5 @@
-<Configuration status="WARN">
-  <Appenders>
-    <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d [%t] %-5p %c - %m%n"/>
-    </Console>
-    <File name="FileLogger" fileName="logs/test.log">
-      <PatternLayout pattern="%d [%t] %-5p %c - %m%n"/>
-    </File>
-  </Appenders>
-  <Loggers>
-    <Root level="info">
-      <AppenderRef ref="Console"/>
-      <AppenderRef ref="FileLogger"/>
-    </Root>
-  </Loggers>
-</Configuration>
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-slf4j-impl</artifactId>
+  <version>2.20.0</version>
+</dependency>
